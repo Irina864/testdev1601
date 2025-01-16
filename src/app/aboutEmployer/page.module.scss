@@ -1,0 +1,34 @@
+@import "@/variables";
+@import "@/template";
+
+.main {
+  margin: 0 100px 60px 100px;
+  display: flex;
+  @include flex(column, flex-start, flex-start);
+  .nav {
+    margin: 32px 0;
+    display: flex;
+    @include flex(row, space-between, center);
+    width: 100%;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 31.61% 65.8%;
+    gap: 32px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .main {
+    width: 100%;
+    margin: 0;
+  }
+  .nav {
+    padding-left: 20px;
+  }
+  .aboutEmployerFromChat {
+    background-color: #fff;
+    width: 100%;
+    padding: 24px 20px;
+  }
+}

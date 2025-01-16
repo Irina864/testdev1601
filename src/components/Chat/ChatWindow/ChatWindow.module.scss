@@ -1,0 +1,56 @@
+@import "@/template";
+@import "@/variables";
+.chatEmptyContainer {
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+  background: #fff;
+  padding: 48px 40px;
+  hr {
+    border: none;
+    border-top: 1px solid #5c75ce;
+    width: 100%;
+    margin-bottom: 28px;
+  }
+  .emptyState {
+    color: #7f7f7f;
+    margin: 16px 0;
+    font-size: 18px;
+    font-weight: 400;
+
+    text-align: center;
+  }
+}
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  border-radius: 10px;
+  background: #fff;
+  padding: 48px 40px;
+  hr {
+    border: none;
+    border-top: 1px solid #5c75ce;
+    width: 100%;
+    margin-bottom: 28px;
+  }
+  .reactionButtons {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+
+    button {
+      padding: 8px 24px;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

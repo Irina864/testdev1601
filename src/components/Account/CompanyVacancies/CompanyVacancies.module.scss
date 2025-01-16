@@ -1,0 +1,164 @@
+@import "@/variables";
+@import "@/template";
+
+.container {
+  width: 816px;
+  min-height: 105px;
+  @include font(16px, $colorText, 400);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: $colorBackground;
+  @include _screenMobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    gap: 24px;
+    background-color: $colorBackgroundForm;
+  }
+  .container__buttons {
+    width: 816px;
+    height: 46px;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+    @include _screenMobile {
+      width: 413px;
+      max-width: 580px;
+      height: 33px;
+      gap: 12px;
+      overflow: scroll;
+      overflow-x: hidden;
+      scroll-snap-type: x;
+      scroll-snap-align: center;
+      // scroll-snap:index($list: , $value: );
+    }
+    .container__buttons__button {
+      width: fit-content;
+      min-width: 100px;
+      height: 46px;
+      align-content: center;
+      padding: 8px 16px 8px 16px;
+      border-radius: 10px;
+      border: 0.5px solid $colorCheckboxBorderActive;
+      background: $colorItemOnHover;
+      @include font(16px, $colorText, 400);
+      line-height: 19.2px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      @include _screenMobile {
+        max-width: 127px;
+        width: fit-content;
+        height: 32px;
+        max-height: 32px;
+        overflow: hidden;
+        @include font(14px, $colorText, 400);
+        line-height: 16.8px;
+        text-align: center;
+      }
+      &:hover,
+      &:active {
+        border-color: $colorIconBackground;
+        background-color: $colorIconBackground;
+      }
+    }
+  }
+  .container__delBtn {
+    width: 243px;
+    height: 19px;
+    @include font(16px, $colorTextError, 400);
+    line-height: 19.2px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    @include _screenMobile {
+      width: 360px;
+      height: 17px;
+      padding: 0px 20px;
+    }
+  }
+  .container__content {
+    width: 816px;
+    min-height: 19px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 32px;
+    @include _screenMobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 360px;
+      // max-width: 580px;
+      // width: 100%;
+      // height: 712px;
+      height: fit-content;
+      gap: 16px;
+    }
+    .container__content__message {
+      width: 816px;
+      height: fit-content;
+      @include font(16px, $colorTextUnactive, 400);
+      line-height: 19.2px;
+      text-align: center;
+      padding-bottom: 32px;
+    }
+    .container__content__addBlock {
+      width: 392px;
+      min-height: 241px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      background: $colorBackgroundForm;
+      box-shadow: -1px 1px 20px 0px $colorShadowCards;
+      @include _screenMobile {
+        display: none;
+      }
+      .addBlock__title {
+        width: 344px;
+        height: 24px;
+        @include font(20px, $colorText, 400);
+        line-height: 24px;
+        text-align: center;
+      }
+      .addBlock__button {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  .button__active {
+    border-color: $colorIconBackground;
+    background-color: $colorIconBackground;
+  }
+  .container__hidden {
+    display: none;
+  }
+}
+
+.nav__add {
+  display: none;
+  @include _screenMobile {
+    display: block;
+    all: unset;
+    width: 156px;
+    height: 35px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-family: Fira Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,61 @@
+@import "@/variables";
+@import "@/template";
+
+.main {
+  margin: 0 100px 60px 100px;
+  display: flex;
+  @include flex(column, flex-start, flex-start);
+  @include _screenMobile {
+    margin: 0 0 40px 0px;
+  }
+  .nav {
+    margin: 32px 0;
+    display: flex;
+    @include flex(row, space-between, center);
+    width: 100%;
+    @include _screenMobile {
+      margin: 32px 0 7px 0;
+      padding: 0 20px;
+    }
+  }
+  .navBtns {
+    display: flex;
+    width: 100%;
+    width: 360px;
+    @include flex(row, space-between, center);
+    .navBtns__add {
+      display: none;
+      @include _screenMobile {
+        display: flex;
+        // @include flex(row, space-between, center);
+        // all: unset;
+        width: 156px;
+        height: 35px;
+        padding: 12px 24px;
+        border-radius: 10px;
+      }
+      .navBtns__add__link {
+        @include _screenMobile {
+          width: 108px;
+          height: 17px;
+          @include font(14px, $colorText, 400);
+          line-height: 16.8px;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 31.61% 65.8%;
+    gap: 32px;
+    width: 100%;
+    @include _screenMobile {
+      background-color: $colorBackgroundForm;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 5px 20px 0 20px;
+    }
+  }
+}

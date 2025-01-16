@@ -1,0 +1,241 @@
+@import "@/variables";
+@import "@/template";
+
+.card {
+  width: 392px;
+  // height: 270px;
+  min-height: 241px;
+  padding: 24px;
+  @include font(16px, $colorText, 400);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  $ai: center;
+  border-radius: 14px;
+  box-shadow: -1px 1px 20px 0px $colorShadowCards;
+  background: $colorBackgroundForm;
+  @include _screenMobile {
+    width: 320px;
+    height: 216px;
+    padding: 20px;
+    gap: 16px;
+  }
+  .card__title {
+    width: 344px;
+    // height: 58px;
+    max-height: 58px;
+    font-family: Fira Sans;
+    font-size: 24px;
+    font-weight: 500;
+    color: $colorText;
+    line-height: 28.8px;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include _screenMobile {
+      width: 280px;
+      height: 26px;
+      max-height: 58px;
+      font-size: 22px;
+      line-height: 26.4px;
+      text-align: left;
+    }
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    width: 344px; //min-
+    height: 56px;
+    gap: 8px;
+    @include _screenMobile {
+      width: 280px;
+      height: 56px;
+      gap: 8px;
+    }
+    .data {
+      display: flex;
+      width: 344px;
+      height: 24px;
+      gap: 4px;
+      @include _screenMobile {
+        width: 280px;
+        height: 24px;
+        gap: 4px;
+      }
+      .data__img {
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
+      .data__title {
+        width: 316px;
+        height: 24px;
+        @include font(16px, $colorTextUnactive, 400);
+        line-height: 19.2px;
+        white-space: nowrap;
+        align-content: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: default;
+        @include _screenMobile {
+          font-size: 14px;
+          line-height: 16.8px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .card__salary {
+    width: 344px;
+    height: 24px;
+    font-family: Fira Sans;
+    font-size: 20px;
+    font-weight: 500;
+    color: $colorText;
+    line-height: 24px;
+    @include _screenMobile {
+      width: 280px;
+      height: 22px;
+      font-size: 18px;
+      line-height: 21.6px;
+    }
+  }
+  .card__options {
+    width: 344px;
+    height: 24px;
+    display: flex;
+    justify-items: space-between;
+    @include _screenMobile {
+      width: 280px;
+      height: 24px;
+    }
+    .card__options__days {
+      width: 280px;
+      height: 24px;
+      font-family: Fira Sans;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.2px;
+      color: $colorTextUnactive;
+      @include _screenMobile {
+        width: 216px;
+        height: 24px;
+        font-size: 14px;
+        line-height: 16.8px;
+      }
+    }
+    .card__options__archive {
+      color: $colorText;
+    }
+    .card__options__icons {
+      width: 64px;
+      height: 24px;
+      display: flex;
+      gap: 16px;
+      .card__options__icons__img {
+        width: 24px;
+        height: 24px;
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+  .card__archive {
+    color: $colorTextUnactive;
+  }
+}
+.delCard {
+  width: 392px;
+  height: 241px;
+  padding: 24px;
+  @include font(16px, $colorText, 400);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+  box-shadow: -1px 1px 20px 0px $colorShadowCards;
+  background: $colorBackgroundForm;
+  @include _screenMobile {
+    width: 320px;
+    height: 216px;
+    padding: 20px;
+  }
+  .delCard__header {
+    width: 344px;
+    height: 24px;
+    max-height: 58px;
+    @include font(20px, $colorText, 500);
+    line-height: 24px;
+    text-align: left;
+    @include _screenMobile {
+      width: 280px;
+      height: 22px;
+      max-height: 58px;
+      @include font(18px, $colorText, 500);
+      line-height: 21.6px;
+      text-align: left;
+    }
+  }
+  .delCard__footer {
+    width: 344px;
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @include _screenMobile {
+      width: 280px;
+    }
+    .delCard__footer__left {
+      width: 88px;
+      height: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      @include _screenMobile {
+        width: 81px;
+      }
+      .delCard__footer__left__img {
+        width: 24px;
+        height: 24px;
+      }
+      .delCard__footer__left__txt {
+        width: 60px;
+        height: 19px;
+        @include font(16px, $colorTextError, 400);
+        line-height: 19.2px;
+        text-align: left;
+        @include _screenMobile {
+          width: 53px;
+          height: 17px;
+          @include font(14px, $colorTextError, 400);
+          line-height: 16.8px;
+        }
+      }
+    }
+    .delCard__footer__right {
+      all: unset;
+      width: 54px;
+      height: 19px;
+      @include font(16px, $colorTextChangeInfo, 400);
+      line-height: 19.2px;
+      text-align: center;
+      cursor: pointer;
+      @include _screenMobile {
+        width: 47px;
+        height: 17px;
+        @include font(14px, $colorTextChangeInfo, 400);
+        line-height: 16.8px;
+      }
+    }
+  }
+}
